@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset=UTF-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Regalos navidad</title>
+    </head>
+
+    <body>
+        <h1>Regalos navidad</h1>
+        <form action="#">
+            <fieldset>
+                <legend>Tus datos</legend>
+                <div>
+                    <label for="nombre">Nombre:
+                        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" size="10">
+                    </label>
+                </div>
+                <div>
+                    <label for="edad"> Tu edad:
+                        <input type="number" name="edad" id="edad" placeholder="Tu edad" min="1" max="120">
+                    </label>
+                </div>
+                <div>
+                    <label for="email"> Tu email:
+                        <input type="email" name="email" id="email" placeholder="Tu email">
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Papá Noel o Reyes Magos</legend>
+                <div>
+                    <label for="fecha-regalos">
+                        <input type="date" name="fecha-regalos" id="fecha-regalos" min="2022-12-25" max="2023-01-06" step="12">
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="reyes-santa" id="santa" value="santa">
+                    <label for="santa">Santa Claus</label>
+                    <input type="radio" name="reyes-santa" id="reyes" value="reyes">
+                    <label for="reyes">Reyes Magos</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Regalos</legend>
+                <div>
+                    <input type="checkbox" name="regalos" id="juegos" value="juegos">
+                    <label for="juegos">Juegos</label>
+                    <input type="checkbox" name="regalos" id="consola" value="consola">
+                    <label for="consola">Consola</label>
+                </div>
+                <div>
+                    <label for="consolas">Consolas</label>
+                    <select name="consolas" id="consolas">
+                        <optgroup label="nuevas">
+                            <option value="play">Playstation</option>
+                            <option value="xbox">xbox</option>
+                        </optgroup>
+                        <optgroup label="retro">
+                            <option value="nintendo">Nintendo</option>
+                            <option value="sega">sega</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="consolas2">Consolas 2</label>
+                <input type="text" list="consolas" id="consolas2">
+                <datalist id="consolas">
+                    <option>Wii</option>
+                    <option>Intellivision</option>
+                </datalist>
+                </div>
+            </fieldset>
+            <label for="comentarios">Comentarios</label><br>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+
+</html>
