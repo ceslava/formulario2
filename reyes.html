@@ -14,7 +14,7 @@
                 <legend>Tus datos</legend>
                 <div>
                     <label for="nombre">Nombre:
-                        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" size="10">
+                        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" size="10" autofocus pattern="\w{2,10}" title="sólo letras, mínimo 3 y máximo 10">
                     </label>
                 </div>
                 <div>
@@ -24,7 +24,7 @@
                 </div>
                 <div>
                     <label for="email"> Tu email:
-                        <input type="email" name="email" id="email" placeholder="Tu email">
+                        <input type="email" name="email" id="email" placeholder="Tu email" >
                     </label>
                 </div>
             </fieldset>
@@ -32,7 +32,8 @@
                 <legend>Papá Noel o Reyes Magos</legend>
                 <div>
                     <label for="fecha-regalos">
-                        <input type="date" name="fecha-regalos" id="fecha-regalos" min="2022-12-25" max="2023-01-06" step="12">
+                        <input type="date" name="fecha-regalos" id="fecha-regalos" min="2022-12-25" max="2023-01-06"
+                            step="12">
                     </label>
                 </div>
                 <div>
@@ -45,9 +46,18 @@
             <fieldset>
                 <legend>Regalos</legend>
                 <div>
+                    <label for="nregalos">Número de regalos</label>
+                    <input type="range" name="nregalos" id="nregalos" list="lregalos" min="1" max="10">
+                    <datalist id="lregalos">
+                        <option value="5" label="Cinco"></option>
+                        <option value="9" label="Nueve"></option>
+                    </datalist>
+
+                </div>
+                <div>
                     <input type="checkbox" name="regalos" id="juegos" value="juegos">
                     <label for="juegos">Juegos</label>
-                    <input type="checkbox" name="regalos" id="consola" value="consola">
+                    <input type="checkbox" name="regalos" id="consola" value="consola" checked>
                     <label for="consola">Consola</label>
                 </div>
                 <div>
@@ -58,20 +68,20 @@
                             <option value="xbox">xbox</option>
                         </optgroup>
                         <optgroup label="retro">
-                            <option value="nintendo">Nintendo</option>
+                            <option selected value="nintendo">Nintendo</option>
                             <option value="sega">sega</option>
                         </optgroup>
                     </select>
                 </div>
                 <div>
                     <label for="consolas2">Consolas 2</label>
-                <input type="text" list="consolas" id="consolas2">
-                <datalist id="consolas">
-                    <option>Wii</option>
-                    <option>Intellivision</option>
-                </datalist>
+                    <input type="text" list="lconsolas" id="consolas2">
+                    <datalist id="lconsolas">
+                        <option value="Wii">Wii</option>
+                        <option value="Intellivision">Intellivision</option>
+                    </datalist>
                 </div>
-                
+
             </fieldset>
             <fieldset>
                 <legend>Reloj</legend>
@@ -85,7 +95,7 @@
                 </div>
             </fieldset>
             <label for="comentarios">Comentarios</label><br>
-            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea><br>
             <button type="submit">Enviar</button>
         </form>
     </body>
